@@ -20,5 +20,5 @@ systemctl stop docker
 json_content='{
     "data-root":"/mydata"
 }'
-echo "$json_content$" > /etc/docker/daemon.json
+echo "$json_content" > /etc/docker/daemon.json
 systemctl start docker
