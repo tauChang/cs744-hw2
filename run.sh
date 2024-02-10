@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Create the network (if it doesn't already exist)
-docker built -t hw2 .
 docker network create hw2-net
 
 # Base directory where node directories will be created
