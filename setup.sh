@@ -1,4 +1,15 @@
 #/bin/bash
+
+# authorized keys
+destination="/local/cs744-hw2-main/authorized_keys"
+touch "$destination"
+
+for user_dir in /users/*/; do
+    if [ -d "$user_dir/.ssh" ]; then
+        cat "$user_dir/.ssh/authorized_keys" >> "$destination"
+    fi
+done
+
 # Add Docker's official GPG key:
 apt-get -y update
 apt-get -y install ca-certificates curl
